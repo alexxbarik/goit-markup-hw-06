@@ -468,6 +468,9 @@ background-color: var(--hero-bg-color);
 display: inline-block;
 margin-bottom: 20px;
 }
+.address-nav.list{
+    width: 231px;
+}
 
 .address-nav.list li{
     margin-bottom: 9px;
