@@ -883,9 +883,21 @@ color:var(--primary-text-color);
     margin-right: auto;
     outline: 1px solid blue;
     }
+
 .checkbox-label{
-    font-size: 14px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    color: var(--primary-text-color);
+    display: inline-block;
+    outline: 1px solid red;
     }
+.checkbox-icon{
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--title-text-color);
+    border-radius: 2px;
+}
+.checkbox-input:checked + .checkbox-icon{
+    background-color: var(--accent-color);
+    background-image: url(../images/symbol-defs.svg#icon-icon-check-1);
+    background-size: contain;
+    background-origin: border-box;
+}
