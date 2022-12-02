@@ -325,35 +325,35 @@
         </button>
     </form>
     </div>
-    
     </footer>
     <div class="backdrop is-hidden " data-modal>
         <div class="modal">
+            <form class="forma" name="forma">
             <button data-modal-close class="modal-btn">
                 <svg class="icon-close" width="18px" height="18px">
                 <use href="./images/symbol-defs.svg#icon-close-black-18dp">
                 </use>
                 </svg></button>
                 <!-- FORMA-MODAL -->
-                <span class="form-title">Залиште свої дані, ми вам передзвонимо</span>
+                <p class="form-title">Залиште свої дані, ми вам передзвонимо</p>
                 <div class="form-modal">
                     <div class="form-field-modal">
                         <label for="name" class="form-label">Ім'я</label>
-                        <input type="text" class="form-input" name="name">
+                        <input type="text" class="form-input" name="name" id="name">
                         <svg class="input-field-icon" width="18px" height="18px">
                             <use href="./images/symbol-defs.svg#icon-person-black-18dp-1">
                             </use></svg>
                     </div>
                     <div class="form-field-modal">
-                        <label for="name" class="form-label">Телефон</label>
-                        <input type="text" class="form-input" name="name">
+                        <label for="phone" class="form-label">Телефон</label>
+                        <input type="text" class="form-input" name="phone" id="phone">
                         <svg class="input-field-icon" width="18px" height="18px">
                             <use href="./images/symbol-defs.svg#icon-phone-black-18dp-1">
                             </use></svg>
                     </div>
                     <div class="form-field-modal">
-                        <label for="name" class="form-label">Пошта</label>
-                        <input type="text" class="form-input" name="name">
+                        <label for="post" class="form-label">Пошта</label>
+                        <input type="text" class="form-input" name="post" id="post">
                         <svg class="input-field-icon" width="18px" height="18px">
                             <use href="./images/symbol-defs.svg#icon-email-black-18dp-1">
                             </use></svg>
@@ -376,6 +376,7 @@
                         <span class="btn-modal-text">відправити</span>
                     </button>
                 </div>
+            </form>
         </div>
     </div>
     <script src="./js/modal.js"></script>
