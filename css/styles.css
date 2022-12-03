@@ -278,6 +278,7 @@ align-items: flex-start;
     align-items: center;
     background-color: var(--secondary-bg-color);
     cursor: auto;
+    border-radius: 4px;
 }
 
 .feature-list .title {
@@ -575,6 +576,7 @@ background-color: var(--hero-bg-color);
 border: 1px solid rgba(255, 255, 255, 0.3);
 filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 border-radius: 4px;
+color: var(--head-title-color);
 }
 
 .form-field input::placeholder{
@@ -584,7 +586,7 @@ line-height: 1.25;
 letter-spacing: 0.03em;
 color: rgba(255, 255, 255, 0.6);
 }
-.form .submit-button{
+.submit-button{
     display: flex;
     margin-left: 12px;
     align-items: center;
@@ -594,11 +596,19 @@ color: rgba(255, 255, 255, 0.6);
     padding-top: 10px;
     padding-bottom: 10px;
     background-color: var(--accent-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border: none;
     cursor: pointer;
+    transition-property: background-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: var(--timing-function);
 }
+.submit-button:hover,
+.submit-button:focus{
+    background-color: var(--button-bgc-hover-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    }
+
     .submit-btn-text{
     color:var(--primary-bg-color);
     font-family: 'Roboto';
@@ -765,9 +775,7 @@ line-height: 1.88;
       border-radius: 4px;
 }
 .forma{
-    outline: 1px solid green;
-    /* width: 100%;
-    height: 100; */
+    /* outline: 1px solid green; */
     padding: 40px;
 }
 .modal .modal-btn{
@@ -802,7 +810,6 @@ display: block;
 text-align: center;
 margin-top: 0;
 margin-bottom: 12px;
-/* margin: 40px 40px 12px 40px; */
 font-weight: 700;
 font-size: 20px;
 line-height: 1.15;
@@ -811,20 +818,20 @@ color: var(--title-text-color);
 /* outline: 1px solid red; */
 }
 .form-modal{
-width: 448px;
-/* height: 342px; */
-/* margin-left: 40px;
-margin-right: 40px;
-margin-bottom: 20px; */
-outline: 1px solid blue;
+display: flex;
+flex-direction: column;
+/* outline: 1px solid blue; */
 }
 .form-field-modal{
+    display: flex;
+    flex-direction: column;
     position: relative;
     width: 448px;
     margin-bottom: 10px;
     /* outline: 1px solid green; */
 }
 .form-label{
+margin-bottom: 4px;
 font-size: 12px;
 line-height: 1.17;
 letter-spacing: 0.01em;
@@ -857,10 +864,15 @@ color:var(--primary-text-color);
     fill: var(--accent-color);
 }
 .form-field-textarea{
+    display: flex;
+    flex-direction: column;
     width: 448px;
     height: 138px;
     margin-bottom: 20px;
     /* outline: 1px solid green; */
+}
+.form-label{
+    margin-bottom: 4px;
 }
 .form-textarea{
     width: 448px;
@@ -886,9 +898,8 @@ color:var(--primary-text-color);
     color: rgba(117, 117, 117, 0.5);
     }
 .form-field-checkbox{
-    width: 423px;
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    width: 100%;
     margin-bottom: 30px;
 }
 .checkbox-input{
